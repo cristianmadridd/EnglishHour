@@ -14,6 +14,16 @@
 		40454A6E1A8E515900D0AD97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40454A6D1A8E515900D0AD97 /* Images.xcassets */; };
 		40454A711A8E515900D0AD97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40454A6F1A8E515900D0AD97 /* LaunchScreen.xib */; };
 		40454A7D1A8E515900D0AD97 /* EnglishHourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40454A7C1A8E515900D0AD97 /* EnglishHourTests.m */; };
+		40454A911A8E55D500D0AD97 /* add-member-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A871A8E55D500D0AD97 /* add-member-on.png */; };
+		40454A921A8E55D500D0AD97 /* add-member.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A881A8E55D500D0AD97 /* add-member.png */; };
+		40454A931A8E55D500D0AD97 /* groups-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A891A8E55D500D0AD97 /* groups-on.png */; };
+		40454A941A8E55D500D0AD97 /* groups.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8A1A8E55D500D0AD97 /* groups.png */; };
+		40454A951A8E55D500D0AD97 /* profile-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8B1A8E55D500D0AD97 /* profile-on.png */; };
+		40454A961A8E55D500D0AD97 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8C1A8E55D500D0AD97 /* profile.png */; };
+		40454A971A8E55D500D0AD97 /* ranking-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8D1A8E55D500D0AD97 /* ranking-on.png */; };
+		40454A981A8E55D500D0AD97 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8E1A8E55D500D0AD97 /* ranking.png */; };
+		40454A991A8E55D500D0AD97 /* warning-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8F1A8E55D500D0AD97 /* warning-on.png */; };
+		40454A9A1A8E55D500D0AD97 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A901A8E55D500D0AD97 /* warning.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,16 @@
 		40454A761A8E515900D0AD97 /* EnglishHourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnglishHourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40454A7B1A8E515900D0AD97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40454A7C1A8E515900D0AD97 /* EnglishHourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnglishHourTests.m; sourceTree = "<group>"; };
+		40454A871A8E55D500D0AD97 /* add-member-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-member-on.png"; sourceTree = "<group>"; };
+		40454A881A8E55D500D0AD97 /* add-member.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-member.png"; sourceTree = "<group>"; };
+		40454A891A8E55D500D0AD97 /* groups-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups-on.png"; sourceTree = "<group>"; };
+		40454A8A1A8E55D500D0AD97 /* groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groups.png; sourceTree = "<group>"; };
+		40454A8B1A8E55D500D0AD97 /* profile-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-on.png"; sourceTree = "<group>"; };
+		40454A8C1A8E55D500D0AD97 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		40454A8D1A8E55D500D0AD97 /* ranking-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ranking-on.png"; sourceTree = "<group>"; };
+		40454A8E1A8E55D500D0AD97 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking.png; sourceTree = "<group>"; };
+		40454A8F1A8E55D500D0AD97 /* warning-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-on.png"; sourceTree = "<group>"; };
+		40454A901A8E55D500D0AD97 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +101,7 @@
 		40454A5F1A8E515900D0AD97 /* EnglishHour */ = {
 			isa = PBXGroup;
 			children = (
+				40454A861A8E55AB00D0AD97 /* Images */,
 				40454A641A8E515900D0AD97 /* AppDelegate.h */,
 				40454A651A8E515900D0AD97 /* AppDelegate.m */,
 				40454A671A8E515900D0AD97 /* ViewController.h */,
@@ -117,6 +138,23 @@
 				40454A7B1A8E515900D0AD97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40454A861A8E55AB00D0AD97 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				40454A871A8E55D500D0AD97 /* add-member-on.png */,
+				40454A881A8E55D500D0AD97 /* add-member.png */,
+				40454A891A8E55D500D0AD97 /* groups-on.png */,
+				40454A8A1A8E55D500D0AD97 /* groups.png */,
+				40454A8B1A8E55D500D0AD97 /* profile-on.png */,
+				40454A8C1A8E55D500D0AD97 /* profile.png */,
+				40454A8D1A8E55D500D0AD97 /* ranking-on.png */,
+				40454A8E1A8E55D500D0AD97 /* ranking.png */,
+				40454A8F1A8E55D500D0AD97 /* warning-on.png */,
+				40454A901A8E55D500D0AD97 /* warning.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +237,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40454A911A8E55D500D0AD97 /* add-member-on.png in Resources */,
 				40454A6C1A8E515900D0AD97 /* Main.storyboard in Resources */,
+				40454A931A8E55D500D0AD97 /* groups-on.png in Resources */,
 				40454A711A8E515900D0AD97 /* LaunchScreen.xib in Resources */,
+				40454A981A8E55D500D0AD97 /* ranking.png in Resources */,
+				40454A961A8E55D500D0AD97 /* profile.png in Resources */,
+				40454A971A8E55D500D0AD97 /* ranking-on.png in Resources */,
+				40454A951A8E55D500D0AD97 /* profile-on.png in Resources */,
 				40454A6E1A8E515900D0AD97 /* Images.xcassets in Resources */,
+				40454A9A1A8E55D500D0AD97 /* warning.png in Resources */,
+				40454A991A8E55D500D0AD97 /* warning-on.png in Resources */,
+				40454A941A8E55D500D0AD97 /* groups.png in Resources */,
+				40454A921A8E55D500D0AD97 /* add-member.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

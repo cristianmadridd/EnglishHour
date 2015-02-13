@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="groups.png" selectedImage="groups-on.png" id="yjZ-4M-hIO"/>
+                    <tabBarItem key="tabBarItem" title="" image="groups.png" id="yjZ-4M-hIO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xq1-ZO-shS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="profile.png" selectedImage="profile-on.png" id="pw4-ul-8bD"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile.png" id="pw4-ul-8bD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIy-ZF-CEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +60,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugi-sI-gUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-467" y="206"/>
+            <point key="canvasLocation" x="-806" y="205"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GHq-GP-Juz">
@@ -75,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ranking.png" selectedImage="ranking-on.png" id="R43-c7-oFv"/>
+                    <tabBarItem key="tabBarItem" title="" image="ranking.png" id="R43-c7-oFv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AqV-rK-vXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,11 +84,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="groups-on.png" width="32" height="32"/>
         <image name="groups.png" width="32" height="32"/>
-        <image name="profile-on.png" width="32" height="32"/>
         <image name="profile.png" width="32" height="32"/>
-        <image name="ranking-on.png" width="32" height="32"/>
         <image name="ranking.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -96,4 +93,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		40454A631A8E515900D0AD97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40454A621A8E515900D0AD97 /* main.m */; };
 		40454A661A8E515900D0AD97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40454A651A8E515900D0AD97 /* AppDelegate.m */; };
-		40454A691A8E515900D0AD97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40454A681A8E515900D0AD97 /* ViewController.m */; };
 		40454A6C1A8E515900D0AD97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40454A6A1A8E515900D0AD97 /* Main.storyboard */; };
 		40454A6E1A8E515900D0AD97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40454A6D1A8E515900D0AD97 /* Images.xcassets */; };
 		40454A711A8E515900D0AD97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40454A6F1A8E515900D0AD97 /* LaunchScreen.xib */; };
@@ -24,6 +23,7 @@
 		40454A981A8E55D500D0AD97 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8E1A8E55D500D0AD97 /* ranking.png */; };
 		40454A991A8E55D500D0AD97 /* warning-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8F1A8E55D500D0AD97 /* warning-on.png */; };
 		40454A9A1A8E55D500D0AD97 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A901A8E55D500D0AD97 /* warning.png */; };
+		40C096741A8E82EF00A88F27 /* EHProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C096731A8E82EF00A88F27 /* EHProfile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,6 @@
 		40454A621A8E515900D0AD97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		40454A641A8E515900D0AD97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40454A651A8E515900D0AD97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		40454A671A8E515900D0AD97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		40454A681A8E515900D0AD97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		40454A6B1A8E515900D0AD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40454A6D1A8E515900D0AD97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		40454A701A8E515900D0AD97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		40454A8E1A8E55D500D0AD97 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking.png; sourceTree = "<group>"; };
 		40454A8F1A8E55D500D0AD97 /* warning-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-on.png"; sourceTree = "<group>"; };
 		40454A901A8E55D500D0AD97 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
+		40C096721A8E82EF00A88F27 /* EHProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfile.h; sourceTree = "<group>"; };
+		40C096731A8E82EF00A88F27 /* EHProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,12 @@
 				40454A861A8E55AB00D0AD97 /* Images */,
 				40454A641A8E515900D0AD97 /* AppDelegate.h */,
 				40454A651A8E515900D0AD97 /* AppDelegate.m */,
-				40454A671A8E515900D0AD97 /* ViewController.h */,
-				40454A681A8E515900D0AD97 /* ViewController.m */,
 				40454A6A1A8E515900D0AD97 /* Main.storyboard */,
 				40454A6D1A8E515900D0AD97 /* Images.xcassets */,
 				40454A6F1A8E515900D0AD97 /* LaunchScreen.xib */,
 				40454A601A8E515900D0AD97 /* Supporting Files */,
+				40C096721A8E82EF00A88F27 /* EHProfile.h */,
+				40C096731A8E82EF00A88F27 /* EHProfile.m */,
 			);
 			path = EnglishHour;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40454A691A8E515900D0AD97 /* ViewController.m in Sources */,
+				40C096741A8E82EF00A88F27 /* EHProfile.m in Sources */,
 				40454A661A8E515900D0AD97 /* AppDelegate.m in Sources */,
 				40454A631A8E515900D0AD97 /* main.m in Sources */,
 			);
@@ -462,6 +462,7 @@
 				40454A821A8E515900D0AD97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40454A831A8E515900D0AD97 /* Build configuration list for PBXNativeTarget "EnglishHourTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +471,7 @@
 				40454A851A8E515900D0AD97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

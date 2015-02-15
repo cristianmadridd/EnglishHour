@@ -23,7 +23,12 @@
 		40454A981A8E55D500D0AD97 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8E1A8E55D500D0AD97 /* ranking.png */; };
 		40454A991A8E55D500D0AD97 /* warning-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A8F1A8E55D500D0AD97 /* warning-on.png */; };
 		40454A9A1A8E55D500D0AD97 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 40454A901A8E55D500D0AD97 /* warning.png */; };
-		40C096741A8E82EF00A88F27 /* EHProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C096731A8E82EF00A88F27 /* EHProfile.m */; };
+		40C096741A8E82EF00A88F27 /* EHProfileUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C096731A8E82EF00A88F27 /* EHProfileUIViewController.m */; };
+		DB12C5681A904B2E00D51F22 /* EHGroupDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5671A904B2E00D51F22 /* EHGroupDetailsViewController.m */; };
+		DB12C56B1A904C5B00D51F22 /* EHGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C56A1A904C5B00D51F22 /* EHGroupTableViewController.m */; };
+		DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */; };
+		DB12C5711A90518600D51F22 /* EHRankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */; };
+		DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +63,18 @@
 		40454A8E1A8E55D500D0AD97 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking.png; sourceTree = "<group>"; };
 		40454A8F1A8E55D500D0AD97 /* warning-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-on.png"; sourceTree = "<group>"; };
 		40454A901A8E55D500D0AD97 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
-		40C096721A8E82EF00A88F27 /* EHProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfile.h; sourceTree = "<group>"; };
-		40C096731A8E82EF00A88F27 /* EHProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfile.m; sourceTree = "<group>"; };
+		40C096721A8E82EF00A88F27 /* EHProfileUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHProfileUIViewController.h; sourceTree = "<group>"; };
+		40C096731A8E82EF00A88F27 /* EHProfileUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHProfileUIViewController.m; sourceTree = "<group>"; };
+		DB12C5661A904B2E00D51F22 /* EHGroupDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGroupDetailsViewController.h; sourceTree = "<group>"; };
+		DB12C5671A904B2E00D51F22 /* EHGroupDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGroupDetailsViewController.m; sourceTree = "<group>"; };
+		DB12C5691A904C5B00D51F22 /* EHGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGroupTableViewController.h; sourceTree = "<group>"; };
+		DB12C56A1A904C5B00D51F22 /* EHGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGroupTableViewController.m; sourceTree = "<group>"; };
+		DB12C56C1A904F6300D51F22 /* EHGroupNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHGroupNewViewController.h; sourceTree = "<group>"; };
+		DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHGroupNewViewController.m; sourceTree = "<group>"; };
+		DB12C56F1A90518600D51F22 /* EHRankingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingTableViewController.h; sourceTree = "<group>"; };
+		DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingTableViewController.m; sourceTree = "<group>"; };
+		DB12C5751A9053AA00D51F22 /* EHRankingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailViewController.h; sourceTree = "<group>"; };
+		DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +123,18 @@
 				40454A6D1A8E515900D0AD97 /* Images.xcassets */,
 				40454A6F1A8E515900D0AD97 /* LaunchScreen.xib */,
 				40454A601A8E515900D0AD97 /* Supporting Files */,
-				40C096721A8E82EF00A88F27 /* EHProfile.h */,
-				40C096731A8E82EF00A88F27 /* EHProfile.m */,
+				40C096721A8E82EF00A88F27 /* EHProfileUIViewController.h */,
+				40C096731A8E82EF00A88F27 /* EHProfileUIViewController.m */,
+				DB12C5661A904B2E00D51F22 /* EHGroupDetailsViewController.h */,
+				DB12C5671A904B2E00D51F22 /* EHGroupDetailsViewController.m */,
+				DB12C5691A904C5B00D51F22 /* EHGroupTableViewController.h */,
+				DB12C56A1A904C5B00D51F22 /* EHGroupTableViewController.m */,
+				DB12C56C1A904F6300D51F22 /* EHGroupNewViewController.h */,
+				DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */,
+				DB12C56F1A90518600D51F22 /* EHRankingTableViewController.h */,
+				DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */,
+				DB12C5751A9053AA00D51F22 /* EHRankingDetailViewController.h */,
+				DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */,
 			);
 			path = EnglishHour;
 			sourceTree = "<group>";
@@ -267,9 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40C096741A8E82EF00A88F27 /* EHProfile.m in Sources */,
+				DB12C5681A904B2E00D51F22 /* EHGroupDetailsViewController.m in Sources */,
+				40C096741A8E82EF00A88F27 /* EHProfileUIViewController.m in Sources */,
+				DB12C56B1A904C5B00D51F22 /* EHGroupTableViewController.m in Sources */,
+				DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */,
 				40454A661A8E515900D0AD97 /* AppDelegate.m in Sources */,
+				DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */,
 				40454A631A8E515900D0AD97 /* main.m in Sources */,
+				DB12C5711A90518600D51F22 /* EHRankingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EnglishHour/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -404,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EnglishHour/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

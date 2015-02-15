@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Cristian Madrid. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface EHProfile : NSObject
+@interface EHProfileUIViewController : UIViewController
 
 @end

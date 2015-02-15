@@ -13,6 +13,21 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
+    [self setImageCircle];
+    
+}
+
+-(void) setImageCircle{
+    //create circle
+    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+    self.profileImage.clipsToBounds = YES;
+    
+    //set borders
+    self.profileImage.layer.borderWidth = 3.0f;
+    self.profileImage.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    //set background image
+    self.profileImage.image = [UIImage imageNamed:@"cheap.jpg"];
     
     
 }

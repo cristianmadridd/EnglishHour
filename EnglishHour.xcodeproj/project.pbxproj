@@ -29,6 +29,8 @@
 		DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */; };
 		DB12C5711A90518600D51F22 /* EHRankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */; };
 		DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */; };
+		DBC4ED661A908EA800FD70B5 /* cheap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED651A908EA800FD70B5 /* cheap.jpg */; };
+		DBC4ED6A1A910E8600FD70B5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED691A910E8600FD70B5 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingTableViewController.m; sourceTree = "<group>"; };
 		DB12C5751A9053AA00D51F22 /* EHRankingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailViewController.h; sourceTree = "<group>"; };
 		DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailViewController.m; sourceTree = "<group>"; };
+		DBC4ED651A908EA800FD70B5 /* cheap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheap.jpg; sourceTree = "<group>"; };
+		DBC4ED691A910E8600FD70B5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 		40454A861A8E55AB00D0AD97 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DBC4ED691A910E8600FD70B5 /* settings.png */,
+				DBC4ED651A908EA800FD70B5 /* cheap.jpg */,
 				40454A871A8E55D500D0AD97 /* add-member-on.png */,
 				40454A881A8E55D500D0AD97 /* add-member.png */,
 				40454A891A8E55D500D0AD97 /* groups-on.png */,
@@ -268,6 +274,7 @@
 				40454A711A8E515900D0AD97 /* LaunchScreen.xib in Resources */,
 				40454A981A8E55D500D0AD97 /* ranking.png in Resources */,
 				40454A961A8E55D500D0AD97 /* profile.png in Resources */,
+				DBC4ED6A1A910E8600FD70B5 /* settings.png in Resources */,
 				40454A971A8E55D500D0AD97 /* ranking-on.png in Resources */,
 				40454A951A8E55D500D0AD97 /* profile-on.png in Resources */,
 				40454A6E1A8E515900D0AD97 /* Images.xcassets in Resources */,
@@ -275,6 +282,7 @@
 				40454A991A8E55D500D0AD97 /* warning-on.png in Resources */,
 				40454A941A8E55D500D0AD97 /* groups.png in Resources */,
 				40454A921A8E55D500D0AD97 /* add-member.png in Resources */,
+				DBC4ED661A908EA800FD70B5 /* cheap.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

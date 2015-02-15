@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface EHGroupNewViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *monButton;
+@property (weak, nonatomic) IBOutlet UIButton *tueButton;
+@property (weak, nonatomic) IBOutlet UIButton *wedButton;
+@property (weak, nonatomic) IBOutlet UIButton *thuButton;
+@property (weak, nonatomic) IBOutlet UIButton *satButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *friButton;
+@property (weak, nonatomic) IBOutlet UIButton *sunButton;
 @end

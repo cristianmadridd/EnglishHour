@@ -10,4 +10,8 @@
 
 @interface EHProfileUIViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileBackground;
+
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+
 @end

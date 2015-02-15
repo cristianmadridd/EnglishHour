@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setRoundedButtonDays];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +25,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden=YES;
+}
+
+-(void) setRoundedButtonDays{
+    self.sunButton.layer.cornerRadius = self.sunButton.frame.size.width / 2;
+    self.sunButton.clipsToBounds = YES;
+    
+    self.monButton.layer.cornerRadius = self.monButton.frame.size.width / 2;
+    self.monButton.clipsToBounds = YES;
+    
+    self.tueButton.layer.cornerRadius = self.tueButton.frame.size.width / 2;
+    self.tueButton.clipsToBounds = YES;
+    
+    self.wedButton.layer.cornerRadius = self.wedButton.frame.size.width / 2;
+    self.wedButton.clipsToBounds = YES;
+    
+    self.thuButton.layer.cornerRadius = self.thuButton.frame.size.width / 2;
+    self.thuButton.clipsToBounds = YES;
+    
+    self.friButton.layer.cornerRadius = self.friButton.frame.size.width / 2;
+    self.friButton.clipsToBounds = YES;
+    
+    self.satButton.layer.cornerRadius = self.satButton.frame.size.width / 2;
+    self.satButton.clipsToBounds = YES;
+}
 /*
 #pragma mark - Navigation
 

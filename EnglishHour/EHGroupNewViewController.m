@@ -6,6 +6,17 @@
 //  Copyright (c) 2015 Cristian Madrid. All rights reserved.
 //
 
+#define CIRCLE_SIZE 160
+#define PATH_SIZE 160
+#define IMAGE_SIZE 45
+#define TOUCH_SIZE 70
+
+#define BUTTON_SELECTED_BACK_COLOR [UIColor orangeColor]
+#define BUTTON_SELECTED_TEXT_COLOR [UIColor whiteColor]
+
+#define BUTTON_BACK_COLOR [UIColor colorWithRed:0.878 green:0.878 blue:0.878 alpha:1]
+#define BUTTON_TEXT_COLOR [UIColor grayColor]
+
 #import "EHGroupNewViewController.h"
 
 @interface EHGroupNewViewController ()
@@ -17,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setRoundedButtonDays];
+    [self addDaysWeekButtons];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,28 +41,131 @@
     self.tabBarController.tabBar.hidden=YES;
 }
 
--(void) setRoundedButtonDays{
-    self.sunButton.layer.cornerRadius = self.sunButton.frame.size.width / 2;
-    self.sunButton.clipsToBounds = YES;
+-(void) addDaysWeekButtons{
     
-    self.monButton.layer.cornerRadius = self.monButton.frame.size.width / 2;
-    self.monButton.clipsToBounds = YES;
+    int btX0 = 0;
+    int btY2 = 0;
     
-    self.tueButton.layer.cornerRadius = self.tueButton.frame.size.width / 2;
-    self.tueButton.clipsToBounds = YES;
+    int btX4 = 0;
+    int btY5 = 0;
     
-    self.wedButton.layer.cornerRadius = self.wedButton.frame.size.width / 2;
-    self.wedButton.clipsToBounds = YES;
+    // Create the layers for all the sharing service images.
+    for(int i = 0; i < 7; i++) {
+        // Calculate the x and y coordinate. Points go around the unit circle starting at pi = 0.
+        int section = i; // If more than 6 sharers, keep the rest in the last position.
+        float trig = section/(7/2.0)*M_PI;
+        float x = CIRCLE_SIZE/2.0 + cosf(trig)*PATH_SIZE/2.0;
+        float y = CIRCLE_SIZE/2.0 - sinf(trig)*PATH_SIZE/2.0;
+        
+        if(i==0)
+            btX0 = x;
+        else if(i==2)
+            btY2 = y;
+        if(i==4)
+            btX4 = x-5;
+        else if(i==5)
+            btY5 = y-5;
+        
+        UIButton *button= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        button.tag = i;
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [button setFrame:CGRectMake(x, y, 50, 50)];
+        [button setTitle:[self stringFromWeekday:i] forState:UIControlStateNormal];
+        [button setExclusiveTouch:YES];
+        [button setTitleColor:BUTTON_TEXT_COLOR forState: UIControlStateNormal];
+        
+        
+        button.titleLabel.font = [UIFont systemFontOfSize:14];
+        button.backgroundColor = BUTTON_BACK_COLOR;
+        button.layer.cornerRadius = button.frame.size.width / 2;
+        button.clipsToBounds = YES;
+        
+        [self.viewCnt addSubview:button];
+    }
     
-    self.thuButton.layer.cornerRadius = self.thuButton.frame.size.width / 2;
-    self.thuButton.clipsToBounds = YES;
     
-    self.friButton.layer.cornerRadius = self.friButton.frame.size.width / 2;
-    self.friButton.clipsToBounds = YES;
+    UIButton *button= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.tag = 7;
+    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake((btX0+btX4)/2, (btY2+btY5)/2, 50, 50)];
+    [button setTitle:@"All" forState:UIControlStateNormal];
+    [button setExclusiveTouch:YES];
+    [button setTitleColor:BUTTON_TEXT_COLOR forState: UIControlStateNormal];
     
-    self.satButton.layer.cornerRadius = self.satButton.frame.size.width / 2;
-    self.satButton.clipsToBounds = YES;
+    
+    button.titleLabel.font = [UIFont systemFontOfSize:14];
+    button.backgroundColor = BUTTON_BACK_COLOR;
+    button.layer.cornerRadius = button.frame.size.width / 2;
+    button.clipsToBounds = YES;
+    
+    [self.viewCnt addSubview:button];
+    
+    
 }
+
+- (NSString *)stringFromWeekday:(NSInteger)weekday {
+    NSDateFormatter * dateFormatter = [NSDateFormatter new];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    return dateFormatter.shortWeekdaySymbols[weekday];
+}
+
+-(void) buttonClicked:(UIButton*)sender
+{
+    
+    if([self isButtonClicked:sender]){
+        if(sender.tag == 7){
+            for(UIView *view in self.viewCnt.subviews){
+                
+                if([view isKindOfClass:[UIButton class]]){
+                    UIButton *bt = (UIButton*)view;
+                    [bt setBackgroundColor:BUTTON_BACK_COLOR];
+                    [bt setTitleColor:BUTTON_TEXT_COLOR forState:UIControlStateNormal];
+                }
+            }
+//            
+//            [self.viewCnt removeAll:^(UIButton *button) {
+//                
+//            }];
+        }
+        else{
+            
+            UIButton *btAll = (UIButton *)[self.viewCnt.subviews objectAtIndex:7];
+            if([self isButtonClicked:btAll]){
+                [btAll setBackgroundColor:BUTTON_BACK_COLOR];
+                [btAll setTitleColor:BUTTON_TEXT_COLOR forState:UIControlStateNormal];
+            }
+            
+            [sender setBackgroundColor:BUTTON_BACK_COLOR];
+            [sender setTitleColor:BUTTON_TEXT_COLOR forState:UIControlStateNormal];
+        }
+        
+    }
+    else{
+        if(sender.tag == 7){
+            for(UIView *view in self.viewCnt.subviews){
+                
+                if([view isKindOfClass:[UIButton class]]){
+                    UIButton *bt = (UIButton*)view;
+                    [bt setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
+                    [bt setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
+                }
+            }
+        }
+        else{
+            [sender setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
+            [sender setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
+        }
+    }
+    
+    NSLog(@"you clicked on button %ld", (long)sender.tag);
+}
+
+-(BOOL) isButtonClicked: (UIButton *) button{
+    if(button.backgroundColor == [UIColor orangeColor])
+        return YES;
+    return NO;
+}
+
 /*
 #pragma mark - Navigation
 

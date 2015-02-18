@@ -20,7 +20,10 @@
 #import "EHGroupNewViewController.h"
 
 @interface EHGroupNewViewController ()
-
+{
+    UILabel *labelSliderInit;
+    UILabel *labelSliderEnd;
+}
 @end
 
 @implementation EHGroupNewViewController
@@ -28,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self configureLabelSlider];
     [self addDaysWeekButtons];
 }
 
@@ -36,9 +40,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden=NO;
+    
+}
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden=YES;
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self updateSliderLabels];
+    
+    if([self.view respondsToSelector:@selector(setTintColor:)])
+    {
+        self.view.tintColor = [UIColor orangeColor];
+    }
+    
 }
 
 -(void) addDaysWeekButtons{
@@ -62,9 +87,9 @@
         else if(i==2)
             btY2 = y;
         if(i==4)
-            btX4 = x-5;
+            btX4 = x-10;
         else if(i==5)
-            btY5 = y-5;
+            btY5 = y+5;
         
         UIButton *button= [UIButton buttonWithType:UIButtonTypeRoundedRect];
         button.tag = i;
@@ -122,10 +147,6 @@
                     [bt setTitleColor:BUTTON_TEXT_COLOR forState:UIControlStateNormal];
                 }
             }
-//            
-//            [self.viewCnt removeAll:^(UIButton *button) {
-//                
-//            }];
         }
         else{
             
@@ -152,8 +173,22 @@
             }
         }
         else{
+            
             [sender setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
             [sender setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
+            
+            for (int i=0; i < self.viewCnt.subviews.count-1; i++) {
+                if(![self isButtonClicked:((UIButton*)([self.viewCnt.subviews objectAtIndex:i]))]){
+                    break;
+                }
+                if(i == self.viewCnt.subviews.count-2){
+                    UIButton *btAll = (UIButton *)[self.viewCnt.subviews objectAtIndex:7];
+                    [btAll setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
+                    [btAll setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
+                }
+                    
+            }
+            
         }
     }
     
@@ -165,6 +200,70 @@
         return YES;
     return NO;
 }
+
+
+#pragma MARK Slider
+- (void) configureLabelSlider
+{
+    self.labelSlider.minimumValue = 0;
+    self.labelSlider.maximumValue = 1440;
+    
+    self.labelSlider.lowerValue = 0;
+    self.labelSlider.upperValue = 1440;
+    
+    self.labelSlider.minimumRange = 10;
+    self.labelSlider.stepValue = 10;
+    
+    self.labelSlider.stepValueContinuously = YES;
+    
+    labelSliderInit = [[UILabel alloc] init];
+    labelSliderEnd = [[UILabel alloc] init];
+    
+    labelSliderInit.text = @"00:00 AM";
+    labelSliderEnd.text = @"00:00 PM";
+    
+    [labelSliderInit sizeToFit];
+    [labelSliderEnd sizeToFit];
+    
+    [labelSliderInit setFont:[UIFont systemFontOfSize:14]];
+    [labelSliderEnd setFont:[UIFont systemFontOfSize:14]];
+    
+    [labelSliderInit setTextColor: BUTTON_TEXT_COLOR];
+    [labelSliderEnd setTextColor: BUTTON_TEXT_COLOR];
+    
+    int y = (self.labelSlider.center.y);
+
+    CGRect frame = labelSliderEnd.frame;
+    frame.origin.y = y;
+    frame.origin.x = self.labelSlider.frame.origin.x+32;
+    labelSliderInit.frame= frame;
+    
+    frame.origin.x= self.labelSlider.frame.origin.x + self.labelSlider.bounds.size.width-36;
+    labelSliderEnd.frame= frame;
+    
+    
+    [self.view addSubview:labelSliderInit];
+    [self.view addSubview:labelSliderEnd];
+    
+}
+
+// Handle control value changed events just like a normal slider
+- (IBAction)labelSliderChanged:(NMRangeSlider*)sender
+{
+    [self updateSliderLabels];
+}
+
+- (void) updateSliderLabels
+{
+    labelSliderInit.text = [self getFormatedHour:(int)self.labelSlider.lowerValue];
+    labelSliderEnd.text = [self getFormatedHour:(int)self.labelSlider.upperValue];
+}
+
+-(NSString*) getFormatedHour: (int) minutes{
+    
+    return [NSString stringWithFormat:@" %02d:%02d %@", (minutes%720)/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
+}
+
 
 /*
 #pragma mark - Navigation

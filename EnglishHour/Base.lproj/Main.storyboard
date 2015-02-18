@@ -296,35 +296,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-sC-6q5">
-                                <rect key="frame" x="16" y="103" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-sC-6q5">
+                                <rect key="frame" x="16" y="82" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vO-Yd-ZER">
-                                <rect key="frame" x="52" y="175" width="217" height="217"/>
+                                <rect key="frame" x="81" y="149" width="160" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-34-3fU" customClass="NMRangeSlider">
+                                <rect key="frame" x="16" y="399" width="288" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="labelSliderChanged:" destination="vIw-Ia-t3Z" eventType="valueChanged" id="XAA-bi-rJC"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ra2-sC-6q5" firstAttribute="trailing" secondItem="E3X-e5-8SK" secondAttribute="trailingMargin" id="AlD-fG-bQB"/>
-                            <constraint firstItem="2vO-Yd-ZER" firstAttribute="centerX" secondItem="ra2-sC-6q5" secondAttribute="centerX" id="D3I-JZ-n1X"/>
-                            <constraint firstItem="2vO-Yd-ZER" firstAttribute="top" secondItem="ra2-sC-6q5" secondAttribute="bottom" constant="42" id="GGV-FK-YpK"/>
-                            <constraint firstItem="ra2-sC-6q5" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leadingMargin" id="Gef-9b-v6f"/>
-                            <constraint firstItem="ra2-sC-6q5" firstAttribute="top" secondItem="ZhC-S3-v8C" secondAttribute="bottom" constant="80" id="SBz-4m-ych"/>
+                            <constraint firstItem="2vO-Yd-ZER" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="81" id="6hc-lG-rcd"/>
+                            <constraint firstItem="ra2-sC-6q5" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="KDq-gh-wNk"/>
+                            <constraint firstItem="2vO-Yd-ZER" firstAttribute="top" secondItem="ra2-sC-6q5" secondAttribute="bottom" constant="37" id="c6U-kC-X8C"/>
+                            <constraint firstItem="ra2-sC-6q5" firstAttribute="top" secondItem="E3X-e5-8SK" secondAttribute="top" constant="82" id="cW9-lE-jIb"/>
+                            <constraint firstAttribute="trailing" secondItem="2vO-Yd-ZER" secondAttribute="trailing" constant="79" id="dCb-eq-q4a"/>
+                            <constraint firstAttribute="trailing" secondItem="ra2-sC-6q5" secondAttribute="trailing" constant="16" id="enQ-D4-2FL"/>
+                            <constraint firstItem="4Wd-34-3fU" firstAttribute="top" secondItem="2vO-Yd-ZER" secondAttribute="bottom" constant="36" id="fmq-57-btT"/>
+                            <constraint firstItem="4Wd-34-3fU" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="fnc-FB-GQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4Wd-34-3fU" secondAttribute="bottom" constant="132" id="jWD-NX-HbD"/>
+                            <constraint firstAttribute="trailing" secondItem="4Wd-34-3fU" secondAttribute="trailing" constant="16" id="sD9-7r-Pjh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Group" id="SOC-dQ-2U3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ttV-rw-qcJ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelSlider" destination="4Wd-34-3fU" id="b6e-6g-o9g"/>
                         <outlet property="viewCnt" destination="2vO-Yd-ZER" id="0T8-rb-Cii"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0M-4g-iao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978" y="2259"/>
+            <point key="canvasLocation" x="-978" y="2171"/>
         </scene>
         <!--Ranking Detail VC-->
         <scene sceneID="qq3-hd-OZE">
@@ -344,6 +357,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0m-qo-K7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-515" y="2259"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MAd-7h-nB1">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Nlq-1i-KeM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="54J-pU-qYo"/>
+                        <viewControllerLayoutGuide type="bottom" id="qcB-Al-wkF"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VlZ-CV-oYD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdI-Qo-Qg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

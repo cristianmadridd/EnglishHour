@@ -31,6 +31,8 @@
 		DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */; };
 		DBC4ED661A908EA800FD70B5 /* cheap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED651A908EA800FD70B5 /* cheap.jpg */; };
 		DBC4ED6A1A910E8600FD70B5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED691A910E8600FD70B5 /* settings.png */; };
+		DBD9B43A1A94E6B10035325C /* EFCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9B4371A94E6B10035325C /* EFCircularSlider.m */; };
+		DBD9B43B1A94E6B10035325C /* EFCircularTrig.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9B4391A94E6B10035325C /* EFCircularTrig.m */; };
 		DBF757B81A93D4A300AAB636 /* slider-default-handle-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF7579A1A93D4A300AAB636 /* slider-default-handle-highlighted.png */; };
 		DBF757B91A93D4A300AAB636 /* slider-default-handle-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF7579B1A93D4A300AAB636 /* slider-default-handle-highlighted@2x.png */; };
 		DBF757BA1A93D4A300AAB636 /* slider-default-handle.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF7579C1A93D4A300AAB636 /* slider-default-handle.png */; };
@@ -58,7 +60,6 @@
 		DBF757D01A93D4A300AAB636 /* slider-metal-trackBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF757B41A93D4A300AAB636 /* slider-metal-trackBackground.png */; };
 		DBF757D11A93D4A300AAB636 /* slider-metal-trackBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBF757B51A93D4A300AAB636 /* slider-metal-trackBackground@2x.png */; };
 		DBF757D21A93D4A300AAB636 /* NMRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF757B71A93D4A300AAB636 /* NMRangeSlider.m */; };
-		DBF757D51A93D4FD00AAB636 /* NMDemoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF757D41A93D4FD00AAB636 /* NMDemoTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,10 @@
 		DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailViewController.m; sourceTree = "<group>"; };
 		DBC4ED651A908EA800FD70B5 /* cheap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheap.jpg; sourceTree = "<group>"; };
 		DBC4ED691A910E8600FD70B5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		DBD9B4361A94E6B10035325C /* EFCircularSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCircularSlider.h; sourceTree = "<group>"; };
+		DBD9B4371A94E6B10035325C /* EFCircularSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCircularSlider.m; sourceTree = "<group>"; };
+		DBD9B4381A94E6B10035325C /* EFCircularTrig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCircularTrig.h; sourceTree = "<group>"; };
+		DBD9B4391A94E6B10035325C /* EFCircularTrig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCircularTrig.m; sourceTree = "<group>"; };
 		DBF7579A1A93D4A300AAB636 /* slider-default-handle-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle-highlighted.png"; sourceTree = "<group>"; };
 		DBF7579B1A93D4A300AAB636 /* slider-default-handle-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle-highlighted@2x.png"; sourceTree = "<group>"; };
 		DBF7579C1A93D4A300AAB636 /* slider-default-handle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-default-handle.png"; sourceTree = "<group>"; };
@@ -135,8 +140,6 @@
 		DBF757B51A93D4A300AAB636 /* slider-metal-trackBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider-metal-trackBackground@2x.png"; sourceTree = "<group>"; };
 		DBF757B61A93D4A300AAB636 /* NMRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMRangeSlider.h; sourceTree = "<group>"; };
 		DBF757B71A93D4A300AAB636 /* NMRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMRangeSlider.m; sourceTree = "<group>"; };
-		DBF757D31A93D4FD00AAB636 /* NMDemoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMDemoTVC.h; sourceTree = "<group>"; };
-		DBF757D41A93D4FD00AAB636 /* NMDemoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMDemoTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +181,7 @@
 		40454A5F1A8E515900D0AD97 /* EnglishHour */ = {
 			isa = PBXGroup;
 			children = (
-				DBF757D31A93D4FD00AAB636 /* NMDemoTVC.h */,
-				DBF757D41A93D4FD00AAB636 /* NMDemoTVC.m */,
+				DBD9B4351A94E6B10035325C /* EFCircularSlider */,
 				DBF757981A93D4A300AAB636 /* NMRangeSlider */,
 				40454A861A8E55AB00D0AD97 /* Images */,
 				40454A641A8E515900D0AD97 /* AppDelegate.h */,
@@ -247,6 +249,18 @@
 				40454A901A8E55D500D0AD97 /* warning.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		DBD9B4351A94E6B10035325C /* EFCircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				DBD9B4361A94E6B10035325C /* EFCircularSlider.h */,
+				DBD9B4371A94E6B10035325C /* EFCircularSlider.m */,
+				DBD9B4381A94E6B10035325C /* EFCircularTrig.h */,
+				DBD9B4391A94E6B10035325C /* EFCircularTrig.m */,
+			);
+			name = EFCircularSlider;
+			path = ../EFCircularSlider;
 			sourceTree = "<group>";
 		};
 		DBF757981A93D4A300AAB636 /* NMRangeSlider */ = {
@@ -448,11 +462,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB12C5681A904B2E00D51F22 /* EHGroupDetailsViewController.m in Sources */,
+				DBD9B43B1A94E6B10035325C /* EFCircularTrig.m in Sources */,
 				40C096741A8E82EF00A88F27 /* EHProfileUIViewController.m in Sources */,
 				DB12C56B1A904C5B00D51F22 /* EHGroupTableViewController.m in Sources */,
 				DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */,
+				DBD9B43A1A94E6B10035325C /* EFCircularSlider.m in Sources */,
 				DBF757D21A93D4A300AAB636 /* NMRangeSlider.m in Sources */,
-				DBF757D51A93D4FD00AAB636 /* NMDemoTVC.m in Sources */,
 				40454A661A8E515900D0AD97 /* AppDelegate.m in Sources */,
 				DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */,
 				40454A631A8E515900D0AD97 /* main.m in Sources */,

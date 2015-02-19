@@ -18,11 +18,15 @@
 #define BUTTON_TEXT_COLOR [UIColor grayColor]
 
 #import "EHGroupNewViewController.h"
+#import "EFCircularSlider.h"
 
 @interface EHGroupNewViewController ()
 {
     UILabel *labelSliderInit;
     UILabel *labelSliderEnd;
+    
+    EFCircularSlider* minuteSlider;
+    EFCircularSlider* hourSlider;
 }
 @end
 
@@ -33,6 +37,7 @@
     
     [self configureLabelSlider];
     [self addDaysWeekButtons];
+    //[self initializeSlider];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -264,6 +269,34 @@
     return [NSString stringWithFormat:@" %02d:%02d %@", (minutes%720)/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
 }
 
+-(void)initializeSlider{
+    
+    CGRect minuteSliderFrame = CGRectMake(30, 100, 310, 310);
+    minuteSlider = [[EFCircularSlider alloc] initWithFrame:minuteSliderFrame];
+    minuteSlider.unfilledColor = BUTTON_BACK_COLOR;
+    minuteSlider.filledColor = BUTTON_SELECTED_BACK_COLOR;
+    //[minuteSlider setInnerMarkingLabels:@[@"5", @"10", @"15", @"20", @"25", @"30", @"35", @"40", @"45", @"50", @"55", @"60"]];
+    minuteSlider.labelFont = [UIFont systemFontOfSize:14.0f];
+    minuteSlider.lineWidth = 2;
+    minuteSlider.minimumValue = 0;
+    minuteSlider.maximumValue = 60;
+    minuteSlider.labelColor = [UIColor colorWithRed:76/255.0f green:111/255.0f blue:137/255.0f alpha:1.0f];
+    minuteSlider.handleType = CircularSliderHandleTypeBigCircle;
+    minuteSlider.handleColor = minuteSlider.filledColor;
+    [self.view addSubview:minuteSlider];
+    [minuteSlider addTarget:self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
+    
+    //hourSlider.snapToLabels = NO;
+    //hourSlider.handleType = CircularSliderHandleTypeBigCircle;
+    
+}
+
+-(void)minuteDidChange:(EFCircularSlider*)slider {
+    int newVal = (int)slider.currentValue < 60 ? (int)slider.currentValue : 0;
+    NSString* oldTime = _timeLabel.text;
+    NSRange colonRange = [oldTime rangeOfString:@":"];
+    _timeLabel.text = [NSString stringWithFormat:@"%@:%02d", [oldTime substringToIndex:colonRange.location], newVal];
+}
 
 /*
 #pragma mark - Navigation

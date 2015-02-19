@@ -18,4 +18,5 @@
 
 - (IBAction)labelSliderChanged:(NMRangeSlider*)sender;
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end

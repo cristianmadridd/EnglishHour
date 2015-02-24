@@ -197,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNv-LY-QfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-515" y="1544"/>
+            <point key="canvasLocation" x="-712" y="1544"/>
         </scene>
         <!--Groups TV-->
         <scene sceneID="a23-T1-lPg">
@@ -240,7 +240,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Szz-6m-LIa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="vIw-Ia-t3Z" kind="push" id="A4u-7u-U7e"/>
+                                <segue destination="vIw-Ia-t3Z" kind="push" id="9lP-f3-xdZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -305,13 +305,6 @@
                                 <rect key="frame" x="81" y="177" width="160" height="214"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-34-3fU" customClass="NMRangeSlider">
-                                <rect key="frame" x="16" y="399" width="288" height="37"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="labelSliderChanged:" destination="vIw-Ia-t3Z" eventType="valueChanged" id="XAA-bi-rJC"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -320,23 +313,19 @@
                             <constraint firstItem="ra2-sC-6q5" firstAttribute="top" secondItem="E3X-e5-8SK" secondAttribute="top" constant="82" id="cW9-lE-jIb"/>
                             <constraint firstAttribute="trailing" secondItem="2vO-Yd-ZER" secondAttribute="trailing" constant="79" id="dCb-eq-q4a"/>
                             <constraint firstAttribute="trailing" secondItem="ra2-sC-6q5" secondAttribute="trailing" constant="16" id="enQ-D4-2FL"/>
-                            <constraint firstItem="4Wd-34-3fU" firstAttribute="top" secondItem="2vO-Yd-ZER" secondAttribute="bottom" constant="36" id="fmq-57-btT"/>
-                            <constraint firstItem="4Wd-34-3fU" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="fnc-FB-GQJ"/>
-                            <constraint firstAttribute="bottom" secondItem="4Wd-34-3fU" secondAttribute="bottom" constant="132" id="jWD-NX-HbD"/>
-                            <constraint firstAttribute="trailing" secondItem="4Wd-34-3fU" secondAttribute="trailing" constant="16" id="sD9-7r-Pjh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Group" id="SOC-dQ-2U3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ttV-rw-qcJ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="labelSlider" destination="4Wd-34-3fU" id="b6e-6g-o9g"/>
+                        <outlet property="txtGroupName" destination="ra2-sC-6q5" id="e1h-5b-MGy"/>
                         <outlet property="viewCnt" destination="2vO-Yd-ZER" id="0T8-rb-Cii"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0M-4g-iao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978" y="2171"/>
+            <point key="canvasLocation" x="-843" y="2259"/>
         </scene>
         <!--Ranking Detail VC-->
         <scene sceneID="qq3-hd-OZE">
@@ -355,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0m-qo-K7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="2307"/>
+            <point key="canvasLocation" x="-319" y="2259"/>
         </scene>
     </scenes>
     <resources>

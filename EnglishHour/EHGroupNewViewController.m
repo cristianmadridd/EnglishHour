@@ -35,9 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configureLabelSlider];
     [self addDaysWeekButtons];
-    //[self initializeSlider];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,8 +59,6 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self updateSliderLabels];
     
     if([self.view respondsToSelector:@selector(setTintColor:)])
     {
@@ -204,98 +200,6 @@
     if(button.backgroundColor == [UIColor orangeColor])
         return YES;
     return NO;
-}
-
-
-#pragma MARK Slider
-- (void) configureLabelSlider
-{
-    self.labelSlider.minimumValue = 0;
-    self.labelSlider.maximumValue = 1440;
-    
-    self.labelSlider.lowerValue = 0;
-    self.labelSlider.upperValue = 1440;
-    
-    self.labelSlider.minimumRange = 10;
-    self.labelSlider.stepValue = 10;
-    
-    self.labelSlider.stepValueContinuously = YES;
-    
-    labelSliderInit = [[UILabel alloc] init];
-    labelSliderEnd = [[UILabel alloc] init];
-    
-    labelSliderInit.text = @"00:00 AM";
-    labelSliderEnd.text = @"00:00 PM";
-    
-    [labelSliderInit sizeToFit];
-    [labelSliderEnd sizeToFit];
-    
-    [labelSliderInit setFont:[UIFont systemFontOfSize:14]];
-    [labelSliderEnd setFont:[UIFont systemFontOfSize:14]];
-    
-    [labelSliderInit setTextColor: BUTTON_TEXT_COLOR];
-    [labelSliderEnd setTextColor: BUTTON_TEXT_COLOR];
-    
-    int y = (self.labelSlider.center.y);
-
-    CGRect frame = labelSliderEnd.frame;
-    frame.origin.y = y;
-    frame.origin.x = self.labelSlider.frame.origin.x+32;
-    labelSliderInit.frame= frame;
-    
-    frame.origin.x= self.labelSlider.frame.origin.x + self.labelSlider.bounds.size.width-36;
-    labelSliderEnd.frame= frame;
-    
-    
-    [self.view addSubview:labelSliderInit];
-    [self.view addSubview:labelSliderEnd];
-    
-}
-
-// Handle control value changed events just like a normal slider
-- (IBAction)labelSliderChanged:(NMRangeSlider*)sender
-{
-    [self updateSliderLabels];
-}
-
-- (void) updateSliderLabels
-{
-    labelSliderInit.text = [self getFormatedHour:(int)self.labelSlider.lowerValue];
-    labelSliderEnd.text = [self getFormatedHour:(int)self.labelSlider.upperValue];
-}
-
--(NSString*) getFormatedHour: (int) minutes{
-    
-    return [NSString stringWithFormat:@" %02d:%02d %@", (minutes%720)/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
-}
-
--(void)initializeSlider{
-    
-    CGRect minuteSliderFrame = CGRectMake(30, 100, 310, 310);
-    minuteSlider = [[EFCircularSlider alloc] initWithFrame:minuteSliderFrame];
-    minuteSlider.unfilledColor = BUTTON_BACK_COLOR;
-    minuteSlider.filledColor = BUTTON_SELECTED_BACK_COLOR;
-    //[minuteSlider setInnerMarkingLabels:@[@"5", @"10", @"15", @"20", @"25", @"30", @"35", @"40", @"45", @"50", @"55", @"60"]];
-    minuteSlider.labelFont = [UIFont systemFontOfSize:14.0f];
-    minuteSlider.lineWidth = 2;
-    minuteSlider.minimumValue = 0;
-    minuteSlider.maximumValue = 60;
-    minuteSlider.labelColor = [UIColor colorWithRed:76/255.0f green:111/255.0f blue:137/255.0f alpha:1.0f];
-    minuteSlider.handleType = CircularSliderHandleTypeBigCircle;
-    minuteSlider.handleColor = minuteSlider.filledColor;
-    [self.view addSubview:minuteSlider];
-    [minuteSlider addTarget:self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
-    
-    //hourSlider.snapToLabels = NO;
-    //hourSlider.handleType = CircularSliderHandleTypeBigCircle;
-    
-}
-
--(void)minuteDidChange:(EFCircularSlider*)slider {
-    int newVal = (int)slider.currentValue < 60 ? (int)slider.currentValue : 0;
-    NSString* oldTime = _timeLabel.text;
-    NSRange colonRange = [oldTime rangeOfString:@":"];
-    _timeLabel.text = [NSString stringWithFormat:@"%@:%02d", [oldTime substringToIndex:colonRange.location], newVal];
 }
 
 /*

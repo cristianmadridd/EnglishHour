@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor orangeColor]];
+    [Parse setApplicationId:@"RFVTcxvGo5eiODNIOUn0aDaNajSzOLHUwA3v4BZ9"
+            clientKey:@"qpwDWqUomeOiXWFkSENozKqVyjUhQM0mFzxBWowe"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     
     
     

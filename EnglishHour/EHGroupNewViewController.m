@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Cristian Madrid. All rights reserved.
 //
 
-#define CIRCLE_SIZE 160
+#define CIRCLE_SIZE 180
 #define PATH_SIZE 160
 #define IMAGE_SIZE 45
 #define TOUCH_SIZE 70
@@ -229,8 +229,8 @@
 }
 
 -(NSString*) getFormatedHour: (int) minutes{
-    
-    return [NSString stringWithFormat:@" %02d:%02d %@", (minutes%720)/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
+    int rest = minutes%720 ;
+    return [NSString stringWithFormat:@" %02d:%02d %@", ((rest >= 0 && rest < 60 ? 720 : minutes%720))/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
 }
 
 /*

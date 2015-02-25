@@ -8,8 +8,15 @@
 #import <UIKit/UIKit.h>
 
 @interface EHGroupNewViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIView *viewCnt;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtGroupName;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblTimeStart;
+@property (weak, nonatomic) IBOutlet UILabel *lblTimeFinish;
+
+@property (weak, nonatomic) IBOutlet UISlider *sliderTimeStart;
+@property (weak, nonatomic) IBOutlet UISlider *sliderTimeFinish;
 
 @end

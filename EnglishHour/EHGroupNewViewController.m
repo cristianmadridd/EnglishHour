@@ -21,13 +21,7 @@
 #import "EFCircularSlider.h"
 
 @interface EHGroupNewViewController ()
-{
-    UILabel *labelSliderInit;
-    UILabel *labelSliderEnd;
-    
-    EFCircularSlider* minuteSlider;
-    EFCircularSlider* hourSlider;
-}
+
 @end
 
 @implementation EHGroupNewViewController
@@ -36,6 +30,25 @@
     [super viewDidLoad];
     
     [self addDaysWeekButtons];
+    
+    self.sliderTimeStart.tag = 0;
+    self.sliderTimeFinish.tag = 1;
+    
+    [self.sliderTimeStart addTarget:
+     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
+    [self.sliderTimeFinish addTarget:
+     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.sliderTimeStart setMinimumValue:0];
+    [self.sliderTimeStart setMaximumValue:1440];
+    
+    [self.sliderTimeFinish setMinimumValue:0];
+    [self.sliderTimeFinish setMaximumValue:1440];
+    
+    [self.sliderTimeStart setValue:720];
+    [self.sliderTimeFinish setValue:720];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +80,8 @@
     
 }
 
+#pragma mark Days Button methods
+
 -(void) addDaysWeekButtons{
     
     int btX0 = 0;
@@ -77,7 +92,6 @@
     
     // Create the layers for all the sharing service images.
     for(int i = 0; i < 7; i++) {
-        // Calculate the x and y coordinate. Points go around the unit circle starting at pi = 0.
         int section = i; // If more than 6 sharers, keep the rest in the last position.
         float trig = section/(7/2.0)*M_PI;
         float x = CIRCLE_SIZE/2.0 + cosf(trig)*PATH_SIZE/2.0;
@@ -192,14 +206,29 @@
             
         }
     }
-    
-    NSLog(@"you clicked on button %ld", (long)sender.tag);
 }
 
 -(BOOL) isButtonClicked: (UIButton *) button{
     if(button.backgroundColor == [UIColor orangeColor])
         return YES;
     return NO;
+}
+
+#pragma mark Time controlls methods
+
+-(IBAction)minuteDidChange:(UISlider*)sender {
+    int value = (int)sender.value - (int)sender.value % 10;
+    if (sender.tag == 0) {
+        self.lblTimeStart.text = [self getFormatedHour:value];
+    }
+    else if(sender.tag == 1){
+        self.lblTimeFinish.text = [self getFormatedHour:value];
+    }
+}
+
+-(NSString*) getFormatedHour: (int) minutes{
+    
+    return [NSString stringWithFormat:@" %02d:%02d %@", (minutes%720)/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
 }
 
 /*

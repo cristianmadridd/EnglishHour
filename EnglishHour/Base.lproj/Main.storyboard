@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IBg-An-FcL">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -296,54 +295,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-sC-6q5">
-                                <rect key="frame" x="16" y="82" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vO-Yd-ZER">
-                                <rect key="frame" x="81" y="177" width="160" height="214"/>
+                                <rect key="frame" x="81" y="171" width="160" height="219"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-Va-zgQ">
-                                <rect key="frame" x="16" y="427" width="135" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="446501895.03906602">
-                                    <!--2015-02-24 20:18:15 +0000-->
-                                </date>
-                            </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xXx-yw-etQ">
-                                <rect key="frame" x="169" y="427" width="135" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="446502062.09120399">
-                                    <!--2015-02-24 20:21:02 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish at" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-Dk-U6N">
-                                <rect key="frame" x="234" y="399" width="70" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start at" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pc8-4c-5As">
-                                <rect key="frame" x="16" y="403" width="70" height="21"/>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="0" maximumValueImage="1440" translatesAutoresizingMaskIntoConstraints="NO" id="ICv-ol-hGp">
+                                <rect key="frame" x="14" y="433" width="292" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="0" maximumValueImage="1440" translatesAutoresizingMaskIntoConstraints="NO" id="vE8-9D-y41">
+                                <rect key="frame" x="14" y="513" width="292" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-qL-22W">
+                                <rect key="frame" x="16" y="405" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLh-Z2-Sen">
+                                <rect key="frame" x="224" y="405" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.51564330680000003" blue="0.1756866413" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Finish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-dF-eHL">
+                                <rect key="frame" x="16" y="485" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="12:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wja-tX-5QR">
+                                <rect key="frame" x="224" y="485" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.51564330680000003" blue="0.1756866413" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-sC-6q5">
+                                <rect key="frame" x="16" y="109" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Peb-qL-22W" firstAttribute="top" secondItem="ra2-sC-6q5" secondAttribute="bottom" constant="266" id="2rw-EJ-jva"/>
+                            <constraint firstAttribute="trailing" secondItem="vE8-9D-y41" secondAttribute="trailing" constant="16" id="428-cp-ltf"/>
+                            <constraint firstItem="Peb-qL-22W" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="4H8-E5-EBM"/>
+                            <constraint firstAttribute="trailing" secondItem="GLh-Z2-Sen" secondAttribute="trailing" constant="16" id="5ZO-Kn-Y96"/>
                             <constraint firstItem="2vO-Yd-ZER" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="81" id="6hc-lG-rcd"/>
+                            <constraint firstItem="vE8-9D-y41" firstAttribute="top" secondItem="aMB-dF-eHL" secondAttribute="bottom" constant="8" id="GhF-Zu-Rmf"/>
+                            <constraint firstAttribute="trailing" secondItem="ICv-ol-hGp" secondAttribute="trailing" constant="16" id="Jhc-AE-ehc"/>
                             <constraint firstItem="ra2-sC-6q5" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="KDq-gh-wNk"/>
-                            <constraint firstItem="ra2-sC-6q5" firstAttribute="top" secondItem="E3X-e5-8SK" secondAttribute="top" constant="82" id="cW9-lE-jIb"/>
+                            <constraint firstItem="vE8-9D-y41" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="Okg-u9-8lI"/>
+                            <constraint firstItem="ICv-ol-hGp" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="ZOc-J9-snz"/>
+                            <constraint firstItem="GLh-Z2-Sen" firstAttribute="top" secondItem="ra2-sC-6q5" secondAttribute="bottom" constant="266" id="c8M-5Y-0FQ"/>
+                            <constraint firstItem="ra2-sC-6q5" firstAttribute="top" secondItem="E3X-e5-8SK" secondAttribute="top" constant="109" id="cW9-lE-jIb"/>
                             <constraint firstAttribute="trailing" secondItem="2vO-Yd-ZER" secondAttribute="trailing" constant="79" id="dCb-eq-q4a"/>
-                            <constraint firstItem="2vO-Yd-ZER" firstAttribute="top" secondItem="ra2-sC-6q5" secondAttribute="bottom" constant="65" id="dve-5K-Jgf"/>
                             <constraint firstAttribute="trailing" secondItem="ra2-sC-6q5" secondAttribute="trailing" constant="16" id="enQ-D4-2FL"/>
+                            <constraint firstItem="ICv-ol-hGp" firstAttribute="top" secondItem="Peb-qL-22W" secondAttribute="bottom" constant="8" id="hkz-4j-kvL"/>
+                            <constraint firstItem="aMB-dF-eHL" firstAttribute="leading" secondItem="E3X-e5-8SK" secondAttribute="leading" constant="16" id="pIf-9I-Gw5"/>
+                            <constraint firstItem="ICv-ol-hGp" firstAttribute="top" secondItem="2vO-Yd-ZER" secondAttribute="bottom" constant="43" id="pYx-Gt-58w"/>
+                            <constraint firstItem="vE8-9D-y41" firstAttribute="top" secondItem="ICv-ol-hGp" secondAttribute="bottom" constant="50" id="peL-m8-kF0"/>
+                            <constraint firstAttribute="trailing" secondItem="Wja-tX-5QR" secondAttribute="trailing" constant="16" id="qU3-gc-Irm"/>
+                            <constraint firstItem="ICv-ol-hGp" firstAttribute="top" secondItem="GLh-Z2-Sen" secondAttribute="bottom" constant="8" id="rVn-dJ-HkI"/>
+                            <constraint firstItem="vE8-9D-y41" firstAttribute="top" secondItem="Wja-tX-5QR" secondAttribute="bottom" constant="8" id="rt4-kP-po3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Group" id="SOC-dQ-2U3">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ttV-rw-qcJ"/>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="lblTimeFinish" destination="Wja-tX-5QR" id="eD3-Lo-f5I"/>
+                        <outlet property="lblTimeStart" destination="GLh-Z2-Sen" id="bix-qb-nrb"/>
+                        <outlet property="sliderTimeFinish" destination="vE8-9D-y41" id="H3x-61-LHy"/>
+                        <outlet property="sliderTimeStart" destination="ICv-ol-hGp" id="y3O-FR-Dkp"/>
                         <outlet property="txtGroupName" destination="ra2-sC-6q5" id="e1h-5b-MGy"/>
                         <outlet property="viewCnt" destination="2vO-Yd-ZER" id="0T8-rb-Cii"/>
                     </connections>
@@ -373,6 +398,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="0" width="32" height="32"/>
+        <image name="1440" width="32" height="32"/>
         <image name="groups.png" width="32" height="32"/>
         <image name="profile.png" width="32" height="32"/>
         <image name="ranking.png" width="32" height="32"/>

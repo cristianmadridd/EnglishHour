@@ -219,7 +219,7 @@
 }
 
 -(IBAction)minuteDidChange:(UISlider*)sender {
-    int value = (int)sender.value - (int)sender.value % 10;
+    int value = (int)sender.value - (int)sender.value % 30;
     if (sender.tag == 0) {
         self.lblTimeStart.text = [self getFormatedHour:value];
     }

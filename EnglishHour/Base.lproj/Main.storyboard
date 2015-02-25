@@ -384,8 +384,9 @@
                         <outlet property="lblTimeStart" destination="GLh-Z2-Sen" id="bix-qb-nrb"/>
                         <outlet property="sliderTimeFinish" destination="vE8-9D-y41" id="H3x-61-LHy"/>
                         <outlet property="sliderTimeStart" destination="ICv-ol-hGp" id="y3O-FR-Dkp"/>
+                        <outlet property="swtIsPrivate" destination="xmc-8d-mAc" id="SsL-nO-4C3"/>
                         <outlet property="txtGroupName" destination="ra2-sC-6q5" id="e1h-5b-MGy"/>
-                        <outlet property="viewCnt" destination="2vO-Yd-ZER" id="0T8-rb-Cii"/>
+                        <outlet property="viewContentDays" destination="2vO-Yd-ZER" id="zHW-QQ-T1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0M-4g-iao" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,27 +405,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XzU-SQ-wjm">
-                                <rect key="frame" x="64" y="86" width="193" height="29"/>
-                                <segments>
-                                    <segment title="Day"/>
-                                    <segment title="Week"/>
-                                    <segment title="Month"/>
-                                </segments>
-                                <color key="tintColor" red="1" green="0.51564330680000003" blue="0.1756866413" alpha="1" colorSpace="calibratedRGB"/>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-8A-pBa">
-                                <rect key="frame" x="105" y="223" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="281" placeholderIntrinsicHeight="284" translatesAutoresizingMaskIntoConstraints="NO" id="r7V-Hk-krs">
+                                <rect key="frame" x="0.0" y="64" width="320" height="119"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XzU-SQ-wjm">
+                                        <rect key="frame" x="64" y="8" width="193" height="29"/>
+                                        <segments>
+                                            <segment title="Day"/>
+                                            <segment title="Week"/>
+                                            <segment title="Month"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-SY-UgH">
+                                        <rect key="frame" x="90" y="55" width="141" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vtu-z9-86s">
+                                        <rect key="frame" x="95" y="74" width="130" height="37"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwQ-4n-sr8">
+                                                <rect key="frame" x="12" y="2" width="20" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfr-Jr-Mpa">
+                                                <rect key="frame" x="8" y="18" width="33" height="21"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXf-tg-TJe">
+                                                <rect key="frame" x="59" y="18" width="13" height="21"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MIN" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reO-ft-a1I">
+                                                <rect key="frame" x="77" y="18" width="23" height="21"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLO-cD-hfD">
+                                                <rect key="frame" x="99" y="18" width="26" height="21"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSP-eG-mMr">
+                                                <rect key="frame" x="55" y="2" width="71" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.71764705882352942" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="XzU-SQ-wjm" secondAttribute="trailing" constant="63" id="U4Z-jl-Odp"/>
-                            <constraint firstItem="XzU-SQ-wjm" firstAttribute="top" secondItem="cfO-MV-2Ty" secondAttribute="top" constant="86" id="hKc-w1-cSM"/>
-                            <constraint firstItem="XzU-SQ-wjm" firstAttribute="leading" secondItem="cfO-MV-2Ty" secondAttribute="leading" constant="64" id="zQt-8r-B92"/>
+                            <constraint firstAttribute="trailing" secondItem="r7V-Hk-krs" secondAttribute="trailing" id="46p-Rs-e07"/>
+                            <constraint firstItem="r7V-Hk-krs" firstAttribute="leading" secondItem="cfO-MV-2Ty" secondAttribute="leading" id="APw-j5-6wC"/>
+                            <constraint firstItem="r7V-Hk-krs" firstAttribute="top" secondItem="cfO-MV-2Ty" secondAttribute="top" constant="64" id="EEF-Ps-CZB"/>
+                            <constraint firstAttribute="bottom" secondItem="r7V-Hk-krs" secondAttribute="bottom" constant="385" id="W8e-ei-k2g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="English Hour Bepid" id="cwd-cu-Ze4"/>

@@ -9,7 +9,7 @@
 
 @interface EHGroupNewViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *viewCnt;
+@property (weak, nonatomic) IBOutlet UIView *viewContentDays;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtGroupName;
 
@@ -18,5 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *sliderTimeStart;
 @property (weak, nonatomic) IBOutlet UISlider *sliderTimeFinish;
+
+@property (weak, nonatomic) IBOutlet UISwitch *swtIsPrivate;
 
 @end

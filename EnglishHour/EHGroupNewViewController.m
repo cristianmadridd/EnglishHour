@@ -102,7 +102,7 @@
         button.layer.cornerRadius = button.frame.size.width / 2;
         button.clipsToBounds = YES;
         
-        [self.viewCnt addSubview:button];
+        [self.viewContentDays addSubview:button];
     }
     
     
@@ -120,7 +120,7 @@
     button.layer.cornerRadius = button.frame.size.width / 2;
     button.clipsToBounds = YES;
     
-    [self.viewCnt addSubview:button];
+    [self.viewContentDays addSubview:button];
     
     
 }
@@ -136,7 +136,7 @@
     
     if([self isButtonClicked:sender]){
         if(sender.tag == 7){
-            for(UIView *view in self.viewCnt.subviews){
+            for(UIView *view in self.viewContentDays.subviews){
                 
                 if([view isKindOfClass:[UIButton class]]){
                     UIButton *bt = (UIButton*)view;
@@ -147,7 +147,7 @@
         }
         else{
             
-            UIButton *btAll = (UIButton *)[self.viewCnt.subviews objectAtIndex:7];
+            UIButton *btAll = (UIButton *)[self.viewContentDays.subviews objectAtIndex:7];
             if([self isButtonClicked:btAll]){
                 [btAll setBackgroundColor:BUTTON_BACK_COLOR];
                 [btAll setTitleColor:BUTTON_TEXT_COLOR forState:UIControlStateNormal];
@@ -160,7 +160,7 @@
     }
     else{
         if(sender.tag == 7){
-            for(UIView *view in self.viewCnt.subviews){
+            for(UIView *view in self.viewContentDays.subviews){
                 
                 if([view isKindOfClass:[UIButton class]]){
                     UIButton *bt = (UIButton*)view;
@@ -174,12 +174,12 @@
             [sender setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
             [sender setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
             
-            for (int i=0; i < self.viewCnt.subviews.count-1; i++) {
-                if(![self isButtonClicked:((UIButton*)([self.viewCnt.subviews objectAtIndex:i]))]){
+            for (int i=0; i < self.viewContentDays.subviews.count-1; i++) {
+                if(![self isButtonClicked:((UIButton*)([self.viewContentDays.subviews objectAtIndex:i]))]){
                     break;
                 }
-                if(i == self.viewCnt.subviews.count-2){
-                    UIButton *btAll = (UIButton *)[self.viewCnt.subviews objectAtIndex:7];
+                if(i == self.viewContentDays.subviews.count-2){
+                    UIButton *btAll = (UIButton *)[self.viewContentDays.subviews objectAtIndex:7];
                     [btAll setBackgroundColor:BUTTON_SELECTED_BACK_COLOR];
                     [btAll setTitleColor:BUTTON_SELECTED_TEXT_COLOR forState:UIControlStateNormal];
                 }
@@ -229,8 +229,9 @@
 }
 
 -(NSString*) getFormatedHour: (int) minutes{
-    int rest = minutes%720 ;
-    return [NSString stringWithFormat:@" %02d:%02d %@", ((rest >= 0 && rest < 60 ? 720 : minutes%720))/60, (minutes%720)%60, minutes < 720 ? @"AM" : @"PM"];
+    
+    int rest = minutes%720;
+    return [NSString stringWithFormat:@" %02d:%02d %@", ((rest >= 0 && rest < 60 ? 720 : minutes%720))/60, (minutes%720)%60, minutes < 1440 && minutes >= 720 ? @"PM" : @"AM"];
 }
 
 /*

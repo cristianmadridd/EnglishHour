@@ -159,7 +159,7 @@
         <scene sceneID="Zrq-iL-Mu7">
             <objects>
                 <tableViewController title="Ranking TV" id="3jf-8D-5Di" customClass="EHRankingTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="dQg-UT-lLi">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dQg-UT-lLi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +202,7 @@
         <scene sceneID="a23-T1-lPg">
             <objects>
                 <tableViewController title="Groups TV" id="vB5-Qp-twG" customClass="EHGroupTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gIR-wj-AYZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gIR-wj-AYZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -388,7 +388,29 @@
                     <view key="view" contentMode="scaleToFill" id="cfO-MV-2Ty">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XzU-SQ-wjm">
+                                <rect key="frame" x="64" y="86" width="193" height="29"/>
+                                <segments>
+                                    <segment title="Day"/>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.51564330680000003" blue="0.1756866413" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGO-8A-pBa">
+                                <rect key="frame" x="105" y="223" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XzU-SQ-wjm" secondAttribute="trailing" constant="63" id="U4Z-jl-Odp"/>
+                            <constraint firstItem="XzU-SQ-wjm" firstAttribute="top" secondItem="cfO-MV-2Ty" secondAttribute="top" constant="86" id="hKc-w1-cSM"/>
+                            <constraint firstItem="XzU-SQ-wjm" firstAttribute="leading" secondItem="cfO-MV-2Ty" secondAttribute="leading" constant="64" id="zQt-8r-B92"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="English Hour Bepid" id="cwd-cu-Ze4"/>
                 </viewController>

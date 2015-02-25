@@ -30,25 +30,7 @@
     [super viewDidLoad];
     
     [self addDaysWeekButtons];
-    
-    self.sliderTimeStart.tag = 0;
-    self.sliderTimeFinish.tag = 1;
-    
-    [self.sliderTimeStart addTarget:
-     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
-    [self.sliderTimeFinish addTarget:
-     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
-    
-    [self.sliderTimeStart setMinimumValue:0];
-    [self.sliderTimeStart setMaximumValue:1440];
-    
-    [self.sliderTimeFinish setMinimumValue:0];
-    [self.sliderTimeFinish setMaximumValue:1440];
-    
-    [self.sliderTimeStart setValue:720];
-    [self.sliderTimeFinish setValue:720];
-    
-    
+    [self setDefaultSliders];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -215,6 +197,26 @@
 }
 
 #pragma mark Time controlls methods
+
+-(void)setDefaultSliders{
+    
+    self.sliderTimeStart.tag = 0;
+    self.sliderTimeFinish.tag = 1;
+    
+    [self.sliderTimeStart addTarget:
+     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
+    [self.sliderTimeFinish addTarget:
+     self action:@selector(minuteDidChange:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.sliderTimeStart setMinimumValue:0];
+    [self.sliderTimeStart setMaximumValue:1440];
+    
+    [self.sliderTimeFinish setMinimumValue:0];
+    [self.sliderTimeFinish setMaximumValue:1440];
+    
+    [self.sliderTimeStart setValue:720];
+    [self.sliderTimeFinish setValue:720];
+}
 
 -(IBAction)minuteDidChange:(UISlider*)sender {
     int value = (int)sender.value - (int)sender.value % 10;

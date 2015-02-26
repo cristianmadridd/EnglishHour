@@ -7,10 +7,16 @@
 //
 
 #import "EHRankingDetailViewController.h"
+#import "EHRankingDetailDayTableViewController.h"
+#import "EHRankingDetailWeekTableViewController.h"
+#import "EHRankingDetailMonthTableViewController.h"
 
 @interface EHRankingDetailViewController ()
-
 @end
+
+UIView *day;
+UIView *week;
+UIView *month;
 
 @implementation EHRankingDetailViewController
 
@@ -24,6 +30,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)segMentValueChanged:(id)sender
+{
+    
+    if(self.sgmMenu.selectedSegmentIndex==0)
+    {
+        EHRankingDetailDayTableViewController *viewDay = [[EHRankingDetailDayTableViewController alloc]init];
+        [self.scrollContent addSubview:viewDay.view];
+    }
+    else if (self.sgmMenu.selectedSegmentIndex==1)
+    {
+        EHRankingDetailWeekTableViewController *viewWeek = [[EHRankingDetailWeekTableViewController alloc]init];
+        [self.scrollContent addSubview:viewWeek.view];
+    }
+    else if (self.sgmMenu.selectedSegmentIndex==2)
+    {
+        EHRankingDetailMonthTableViewController *viewMonth = [[EHRankingDetailMonthTableViewController alloc]init];
+        [self.scrollContent addSubview:viewMonth.view];
+        //[self.navigationController pushViewController:viewMonth animated:YES];
+    }
+}
 /*
 #pragma mark - Navigation
 

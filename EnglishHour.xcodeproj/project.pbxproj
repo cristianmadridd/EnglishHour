@@ -45,6 +45,9 @@
 		DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */; };
 		DB12C5711A90518600D51F22 /* EHRankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */; };
 		DB12C5771A9053AA00D51F22 /* EHRankingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */; };
+		DB9004C31A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9004C21A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.m */; };
+		DB9004C61A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9004C51A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.m */; };
+		DB9004C91A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9004C81A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.m */; };
 		DBC4ED661A908EA800FD70B5 /* cheap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED651A908EA800FD70B5 /* cheap.jpg */; };
 		DBC4ED6A1A910E8600FD70B5 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = DBC4ED691A910E8600FD70B5 /* settings.png */; };
 		DBD9B43A1A94E6B10035325C /* EFCircularSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD9B4371A94E6B10035325C /* EFCircularSlider.m */; };
@@ -112,6 +115,12 @@
 		DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingTableViewController.m; sourceTree = "<group>"; };
 		DB12C5751A9053AA00D51F22 /* EHRankingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailViewController.h; sourceTree = "<group>"; };
 		DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailViewController.m; sourceTree = "<group>"; };
+		DB9004C11A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailWeekTableViewController.h; sourceTree = "<group>"; };
+		DB9004C21A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailWeekTableViewController.m; sourceTree = "<group>"; };
+		DB9004C41A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailDayTableViewController.h; sourceTree = "<group>"; };
+		DB9004C51A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailDayTableViewController.m; sourceTree = "<group>"; };
+		DB9004C71A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRankingDetailMonthTableViewController.h; sourceTree = "<group>"; };
+		DB9004C81A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRankingDetailMonthTableViewController.m; sourceTree = "<group>"; };
 		DBC4ED651A908EA800FD70B5 /* cheap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cheap.jpg; sourceTree = "<group>"; };
 		DBC4ED691A910E8600FD70B5 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		DBD9B4361A94E6B10035325C /* EFCircularSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCircularSlider.h; sourceTree = "<group>"; };
@@ -189,10 +198,16 @@
 				DB12C56A1A904C5B00D51F22 /* EHGroupTableViewController.m */,
 				DB12C56C1A904F6300D51F22 /* EHGroupNewViewController.h */,
 				DB12C56D1A904F6300D51F22 /* EHGroupNewViewController.m */,
+				DB9004C41A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.h */,
+				DB9004C51A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.m */,
 				DB12C56F1A90518600D51F22 /* EHRankingTableViewController.h */,
 				DB12C5701A90518600D51F22 /* EHRankingTableViewController.m */,
 				DB12C5751A9053AA00D51F22 /* EHRankingDetailViewController.h */,
+				DB9004C71A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.h */,
+				DB9004C81A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.m */,
 				DB12C5761A9053AA00D51F22 /* EHRankingDetailViewController.m */,
+				DB9004C11A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.h */,
+				DB9004C21A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.m */,
 			);
 			path = EnglishHour;
 			sourceTree = "<group>";
@@ -396,6 +411,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB12C5681A904B2E00D51F22 /* EHGroupDetailsViewController.m in Sources */,
+				DB9004C61A9EA44A002C6BEC /* EHRankingDetailDayTableViewController.m in Sources */,
+				DB9004C91A9EA459002C6BEC /* EHRankingDetailMonthTableViewController.m in Sources */,
 				DBD9B43B1A94E6B10035325C /* EFCircularTrig.m in Sources */,
 				40C096741A8E82EF00A88F27 /* EHProfileUIViewController.m in Sources */,
 				DB12C56B1A904C5B00D51F22 /* EHGroupTableViewController.m in Sources */,
@@ -403,6 +420,7 @@
 				DBD9B43A1A94E6B10035325C /* EFCircularSlider.m in Sources */,
 				40454A661A8E515900D0AD97 /* AppDelegate.m in Sources */,
 				DB12C56E1A904F6300D51F22 /* EHGroupNewViewController.m in Sources */,
+				DB9004C31A9EA427002C6BEC /* EHRankingDetailWeekTableViewController.m in Sources */,
 				40454A631A8E515900D0AD97 /* main.m in Sources */,
 				DB12C5711A90518600D51F22 /* EHRankingTableViewController.m in Sources */,
 			);

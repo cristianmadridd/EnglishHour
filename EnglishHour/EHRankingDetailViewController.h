@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EHRankingDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sgmMenu;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollContent;
 
 @end

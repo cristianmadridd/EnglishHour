@@ -22,7 +22,10 @@ UIView *month;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.sgmMenu.selectedSegmentIndex = 2;
+    [self.sgmMenu sendActionsForControlEvents:UIControlEventValueChanged];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,18 +39,20 @@ UIView *month;
     if(self.sgmMenu.selectedSegmentIndex==0)
     {
         EHRankingDetailDayTableViewController *viewDay = [[EHRankingDetailDayTableViewController alloc]init];
+        [self addChildViewController:viewDay];
         [self.scrollContent addSubview:viewDay.view];
     }
     else if (self.sgmMenu.selectedSegmentIndex==1)
     {
         EHRankingDetailWeekTableViewController *viewWeek = [[EHRankingDetailWeekTableViewController alloc]init];
+        [self addChildViewController:viewWeek];
         [self.scrollContent addSubview:viewWeek.view];
     }
     else if (self.sgmMenu.selectedSegmentIndex==2)
     {
         EHRankingDetailMonthTableViewController *viewMonth = [[EHRankingDetailMonthTableViewController alloc]init];
+        [self addChildViewController:viewMonth];
         [self.scrollContent addSubview:viewMonth.view];
-        //[self.navigationController pushViewController:viewMonth animated:YES];
     }
 }
 /*
